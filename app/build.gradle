@@ -2,10 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlinx-serialization'
 
 android {
-    compileSdkVersion 30
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.common.weikaiyun"
@@ -49,7 +48,6 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
     implementation "androidx.viewpager2:viewpager2:${versions.viewpager2}"
 
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:${versions.kotlin_serialization}"
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}"

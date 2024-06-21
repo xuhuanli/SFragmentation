@@ -69,7 +69,12 @@ public class SupportHelper {
      * @param fragment 目标Fragment
      */
     public static ISupportFragment getPreFragment(Fragment fragment) {
-        FragmentManager fragmentManager = fragment.getParentFragmentManager();
+        FragmentManager fragmentManager = null;
+        try {
+            fragmentManager = fragment.getParentFragmentManager();
+        } catch (Exception e) {
+            return null;
+        }
 
         List<Fragment> fragmentList = getActiveFragments(fragmentManager);
         int index = fragmentList.indexOf(fragment);
